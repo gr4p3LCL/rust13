@@ -13,10 +13,9 @@ fn rot13(message: &str) -> String {
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    let message = if let Some(message) = args.get(1) {
-        message
-    } else {
-        "Cebtenzzvat Cenkvf vf sha!"
+    let message = match args.get(1) {
+        Some(message) => message,
+        None => "Cebtenzzvat Cenkvf vf sha!",
     };
 
     println!("{}", rot13(message));
