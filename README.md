@@ -1,2 +1,2 @@
 # rust13
-ROT13 in rust
+ROT13 in rust. ASCII only.
